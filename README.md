@@ -1,2 +1,3 @@
 # Medication-effect
 simulations
+This is for practicing. I don't know how to use GitHub yet...
