@@ -8,10 +8,8 @@ With a series of simulations, we compare several available methods for handling 
 - censored data? underlying blood pressure is higher than it is observed
 - selection bias? people with certain characteristics use medication
 
-Scenarios vary based on whether the exposure, the outcome or a confounder is affected by medication use. 
+Scenarios vary based on whether the exposure, the outcome or a confounder is affected by medication use. Originally, we borrow several covariates directly from the Netherlands Epidemiology of Obesity (NEO). Due to privacy concern, here, I modified the data.
 
-
-Originally, we borrow several covariates directly from the Netherlands Epidemiology of Obesity (NEO). Due to privacy concern, here, I modified the data.
-
-Fake NEO data to run simulation: fake_data.rds
-
+Uploaded files include:
+- Fake NEO data to run simulation: fake_data.rds
+- Simulation example syntax (outcome affected scenario): Simulation_example_scenario3.R
