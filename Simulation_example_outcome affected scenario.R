@@ -111,7 +111,7 @@ betas.med<-as.matrix(c(-16     #intercept
 #################################
 ###  Parameters for analysis  ###     
 #################################
-nsim<-2   #       #number of simulation run
+nsim<-100   #       #number of simulation run
 m<-10        #       #number of imputation (we have to make it larger at the end)
 medeffect.a<-20      #medication effect of blood pressure 1
 medeffect.b<-30      #medication effect of blood pressure 2
