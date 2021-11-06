@@ -1,2 +1,0 @@
-# Medication-effect
-simulations
