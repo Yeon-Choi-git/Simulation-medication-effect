@@ -20,7 +20,7 @@ library(DataCombine)
 
 
 ######## My directory ########
-#setwd(C:/Users/ChoiJ/Desktop/새 폴더/Simulation-medication-effect)
+setwd("C:/Users/ChoiJ/Desktop/새 폴더/Simulation-medication-effect")
 
 
 ######################################################
@@ -74,6 +74,7 @@ mice.impute.censnorm <- function (y, ry, x, wy = NULL,ycens, ...)
 # [CODE REMOVED]
 # Originally here I call the NEO data to borrow the covariates.
 # Instead, for a demonstration, I use fake data, and pretend this is the NEO.
+
 neo.pre<-readRDS("fake_data.rds")
 
 
@@ -143,8 +144,8 @@ set.seed(seed[i])
 
 #prepare matrix
 X<- cbind(rep(1, nrow(neo.pre)),neo.pre[, c("bmim","sexe","leeftijd","eduh")])
-X$sexe<-as.numeric(X$sexe)-1
-X$eduh<-as.numeric(X$eduh)-1
+X$sexe<-ifelse(X$sexe=="vrouw",1,0)
+X$eduh<-ifelse(X$eduh=="high",1,0)
       
 # now generate untreated bloodpressures
 bp.pred <- as.matrix(X) %*% as.matrix(betas)
