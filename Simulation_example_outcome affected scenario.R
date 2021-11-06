@@ -20,7 +20,7 @@ library(DataCombine)
 
 
 ######## My directory ########
-setwd("C:/Users/ChoiJ/Desktop/새 폴더/Simulation-medication-effect")
+#setwd("C:/Users/ChoiJ/Desktop/새 폴더/Simulation-medication-effect")
 
 
 ######################################################
