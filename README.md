@@ -12,3 +12,6 @@ Scenarios vary based on whether the exposure, the outcome or a confounder is aff
 
 
 Originally, we borrow several covariates directly from the Netherlands Epidemiology of Obesity (NEO). Due to privacy concern, here, I modified the data.
+
+Fake NEO data to run simulation: fake_data.rds
+
