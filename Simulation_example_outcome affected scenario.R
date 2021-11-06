@@ -71,12 +71,10 @@ mice.impute.censnorm <- function (y, ry, x, wy = NULL,ycens, ...)
 ###     Outcome affected: waist cir. -> BP         ###
 ###                                                ###
 ######################################################
-
 # [CODE REMOVED]
 # Originally here I call the NEO data to borrow the covariates.
-# Instead, for a demonstration, I call a fake data.
-read.dta()
-
+# Instead, for a demonstration, I use fake data, and pretend this is the NEO.
+neo.pre<-readRDS("fake_data.rds")
 
 
 ######################################################
@@ -84,17 +82,19 @@ read.dta()
 ###           Generate simulation data             ###
 ###                                                ###
 ######################################################
-
 #################################
 ###     Generate variables    ###     
 #################################
 sd.bp.true <- 20
 med.effect<-30
 med.sd<-10
-# We borrow several covariates from the NEO data.
-# Lets assume that the effect of BMI on untreated bloodpressure is 0.8
-# We used betas for other variables directly from the analysis
+# Originally, we borrow several covariates from the NEO data. 
+# Here, i'm pretending to do so from the fake data.
+
+
+# Assume that the effect of BMI on untreated bloodpressure is 0.8
 # Residual standard deviation is 15.7
+# These values are based on the evidence from the NEO.
 neo.obs<- lm(bpsystgem ~ bmim + sexe + leeftijd +eduh, data=neo.pre)
 betas <- coefficients(neo.obs)
 betas[1] <- 90   #Intercept
